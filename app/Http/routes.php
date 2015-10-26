@@ -20,3 +20,8 @@ Route::post('/enviar', 'CampeonatoController@enviar');
 Route::get('/cat', 'CategoriaController@index');
 Route::get('/listaCat', 'CategoriaController@listar');
 Route::post('/cadCat','CategoriaController@enviar');
+
+//Rotas do Controller Participantes
+Route::get('/listaPart', 'ParticipanteController@listar');
+Route::get('/participante', 'ParticipanteController@index');
+Route::post('/cadPart', 'ParticipanteController@enviar');

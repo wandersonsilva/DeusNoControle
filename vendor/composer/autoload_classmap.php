@@ -9,6 +9,7 @@ return array(
     'AlterCampeonatosTable' => $baseDir . '/database/migrations/2015_10_24_015435_alter_campeonatos_table.php',
     'CreateCampeonatosTable' => $baseDir . '/database/migrations/2015_10_23_202215_create_campeonatos_table.php',
     'CreateCategoriasTable' => $baseDir . '/database/migrations/2015_10_23_202914_create_categorias_table.php',
+    'CreateParticipantesTable' => $baseDir . '/database/migrations/2015_10_26_155905_create_participantes_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

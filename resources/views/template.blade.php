@@ -36,6 +36,14 @@
                     </ul>
                 </li>
 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jogadores<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/participante">Novo Jogador</a></li>
+                        <li><a href="/listaPart">Listar Jogadores</a></li>
+                    </ul>
+                </li>
+
             </ul>
 
         </div>
