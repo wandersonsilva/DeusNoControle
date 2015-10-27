@@ -12,13 +12,13 @@ class CategoriaController extends Controller
 
     public function index()
     {
-        return view('categoriaCampeonato');
+        return view('categoria.index');
     }
 
-    public function enviar(CategoriaEnviarRequest $request, Categoria $categoria)
+    public function adicionar(CategoriaEnviarRequest $request, Categoria $categoria)
     {
 
-        $categoria->nome = $request->get('nome');
+        $categoria->nome = strtoupper($request->get('nome'));
 
         $categoria->save();
 
@@ -29,7 +29,7 @@ class CategoriaController extends Controller
 
     public function listar()
     {
-        return view('listaCat', array('categorias' => Categoria::all()));
+        return view('categoria.lista', array('categorias' => Categoria::all()));
     }
 
 }

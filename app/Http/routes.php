@@ -11,17 +11,24 @@
 |
 */
 
-//Rotas do Controller Campeonato
+//Rota Página Principal
 Route::get('/', 'CampeonatoController@index');
-Route::get('/listaCamp', 'CampeonatoController@listar');
-Route::post('/enviar', 'CampeonatoController@enviar');
+
+//Rotas do Controller Campeonato
+Route::get('/campeonato', 'CampeonatoController@index');
+Route::get('/campeonato/listagem', 'CampeonatoController@listar');
+Route::post('/campeonato/adicionar', 'CampeonatoController@adicionar');
+Route::get('/campeonato/{id}/remover', 'CampeonatoController@remover');
+Route::get('/campeonato/{id}/editar', 'CampeonatoController@editar');
+Route::post('/campeonato/{id}/alterar', 'CampeonatoController@alterar');
 
 //Rotas do Controller Categorias de Campeonato
-Route::get('/cat', 'CategoriaController@index');
-Route::get('/listaCat', 'CategoriaController@listar');
-Route::post('/cadCat','CategoriaController@enviar');
+Route::get('/categoria', 'CategoriaController@index');
+Route::get('/categoria/listagem', 'CategoriaController@listar');
+Route::post('/categoria/adicionar','CategoriaController@adicionar');
 
 //Rotas do Controller Participantes
-Route::get('/listaPart', 'ParticipanteController@listar');
 Route::get('/participante', 'ParticipanteController@index');
-Route::post('/cadPart', 'ParticipanteController@enviar');
+Route::get('/participante/listagem', 'ParticipanteController@listar');
+Route::post('/participante/adicionar', 'ParticipanteController@adicionar');
+Route::get('/participante/{id}/remover', 'ParticipanteController@remover');

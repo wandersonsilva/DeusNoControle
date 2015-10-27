@@ -1,16 +1,16 @@
-@extends('template')
+@extends('layout.template')
 @section('conteudo')
 
     <h3>Categoria do Campeonato</h3>
 
     <hr />
 
-    <form action="/cadCat" method="POST">
+    <form action="{{ action('CategoriaController@adicionar') }}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <div class="form-group">
             <label for="nome">Categoria</label>
-            <input type="text" id="nome" name="nome" class="form-control" placeholder="Categoria">
+            <input type="text" id="nome" name="nome" class="form-control text-uppercase" placeholder="Categoria/Tipo">
         </div>
 
 

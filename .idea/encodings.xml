@@ -3,12 +3,13 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/Http/routes.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/lang/en/validation.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/campeonato.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/categoriaCampeonato.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/listaCamp.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/listaCat.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/listaPart.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/participante.blade.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/resources/views/template.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/campeonato/editar.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/campeonato/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/campeonato/lista.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/categoria/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/categoria/lista.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/layout/template.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/participante/index.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/participante/lista.blade.php" charset="UTF-8" />
   </component>
 </project>

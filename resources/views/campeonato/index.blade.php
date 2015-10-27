@@ -1,16 +1,16 @@
-@extends('template')
+@extends('layout.template')
 @section('conteudo')
 
     <h3>Novo Campeonato VG</h3>
 
     <hr />
 
-    <form action="/enviar" method="POST">
+    <form action="{{ action('CampeonatoController@adicionar') }}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
         <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome Campeonato">
+            <input type="text" id="nome" name="nome" class="form-control text-uppercase" placeholder="Nome Campeonato/Local">
         </div>
 
         <div class="form-group">
@@ -26,7 +26,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-default">Enviar</button>
+        <button type="submit" class="btn btn-default">Cadastrar</button>
 
     </form>
 

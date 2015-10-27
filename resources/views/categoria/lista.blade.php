@@ -1,7 +1,7 @@
-@extends('template')
+@extends('layout.template')
 @section('conteudo')
 
-    <h3>Listagem dos Participantes Cadastrados</h3>
+    <h3>Listagem das Categorias de Campeonato</h3>
 
     <hr />
 
@@ -12,9 +12,13 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($participantes as $row)
+        @foreach($categorias as $row)
             <tr>
                 <td>{{ $row->nome }}</td>
+                <td>
+                    <a href="#" class="btn btn-info">Alterar</a>
+                    <a href="#" class="btn btn-danger">Excluir</a>
+                </td>
             </tr>
         @endforeach
         </tbody>

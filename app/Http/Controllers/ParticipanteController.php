@@ -13,13 +13,13 @@ class ParticipanteController extends Controller
 
     public function index()
     {
-        return view('participante');
+        return view('participante.index');
     }
 
-    public function enviar(ParticipanteEnviarRequest $request, Participante $participante)
+    public function adicionar(ParticipanteEnviarRequest $request, Participante $participante)
     {
 
-        $participante->nome = $request->get('nome');
+        $participante->nome = strtoupper($request->get('nome'));
         $participante->save();
 
         return redirect()->action('ParticipanteController@listar');
@@ -29,8 +29,14 @@ class ParticipanteController extends Controller
     public function listar()
     {
 
-        return view('listaPart', array('participantes' => Participante::all()));
+        return view('participante.lista', array('participantes' => Participante::all()));
 
+    }
+
+    public function remover($id)
+    {
+        Participante::find($id)->delete();
+        return redirect()->action('ParticipanteController@listar');
     }
 
 

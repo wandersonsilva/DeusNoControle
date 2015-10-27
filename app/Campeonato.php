@@ -12,4 +12,10 @@ class Campeonato extends Model
         return $this->belongsTo(Categoria::class);
     }
 
+    protected $fillable = [
+        'id',
+        'nome',
+        'categoria_id'
+    ];
+
 }

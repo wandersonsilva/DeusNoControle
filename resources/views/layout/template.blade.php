@@ -23,24 +23,24 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Campeonato <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/">Novo Campeonato</a> </li>
-                        <li><a href="/listaCamp">Listar Campeonato</a></li>
+                        <li><a href="{{ action('CampeonatoController@index') }}">Novo Campeonato</a> </li>
+                        <li><a href="{{action('CampeonatoController@listar')}}">Listar Campeonato</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tipo Campeonato<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/cat">Nova Categoria</a></li>
-                        <li><a href="/listaCat">Listar Categoria</a></li>
+                        <li><a href="{{ action('CategoriaController@index') }}">Nova Categoria</a></li>
+                        <li><a href="{{ action('CategoriaController@listar') }}">Listar Categoria</a></li>
                     </ul>
                 </li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jogadores<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/participante">Novo Jogador</a></li>
-                        <li><a href="/listaPart">Listar Jogadores</a></li>
+                        <li><a href="{{ action('ParticipanteController@index') }}">Novo Jogador</a></li>
+                        <li><a href="{{ action('ParticipanteController@listar') }}">Listar Jogadores</a></li>
                     </ul>
                 </li>
 

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layout.template')
 @section('conteudo')
 
     <h3>Listagem de Campeonatos</h3>
@@ -12,6 +12,7 @@
             <th>Nome</th>
             <th>Categoria</th>
             <th>Data</th>
+
         </tr>
         </thead>
         <tbody>
@@ -21,6 +22,10 @@
                 <td>{{ $row->nome }}</td>
                 <td>{{ $row->categoria['nome'] }}</td>
                 <td>{{ $row->created_at->format('d/m/Y') }}</td>
+                <td>
+                    <a href="{{ action('CampeonatoController@editar', [$row->id]) }}" class="btn btn-info">Alterar</a>
+                    <a href="{{ action('CampeonatoController@remover', [$row->id]) }}" class="btn btn-danger">Excluir</a>
+                </td>
             </tr>
         @endforeach
         </tbody>

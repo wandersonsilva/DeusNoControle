@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
 use App\Http\Requests\CampeonatoEnviarRequest;
 use App\Campeonato;
 use Illuminate\Http\Request;
@@ -12,13 +13,13 @@ class CampeonatoController extends Controller
 
     public function index()
     {
-        return view('campeonato');
+        return view('campeonato.index');
     }
 
-    public function enviar(CampeonatoEnviarRequest $request, Campeonato $campeonato)
+    public function adicionar(CampeonatoEnviarRequest $request, Campeonato $campeonato)
     {
 
-        $campeonato->nome = $request->get('nome');
+        $campeonato->nome = strtoupper($request->get('nome'));
         $campeonato->categoria_id = $request->get('categoria_id');
 
         $campeonato->save();
@@ -31,7 +32,32 @@ class CampeonatoController extends Controller
 
     public function listar()
     {
-        return view('listaCamp', array('campeonatos' => Campeonato::all()));
+        return view('campeonato.lista', array('campeonatos' => Campeonato::all()));
+    }
+
+    public function remover($id)
+    {
+        Campeonato::find($id)->delete();
+        return redirect()->action('CampeonatoController@listar');
+    }
+
+    public function editar($id)
+    {
+        $campeonato = Campeonato::find($id);
+        $categoria  = Categoria::all();
+
+        return view('campeonato.editar', compact('campeonato', 'categoria'));
+
+    }
+
+    public function alterar($id, Request $request)
+    {
+        $campeonato = Campeonato::find($id);
+        $campeonato->fill($request->all());
+        $campeonato->nome = strtoupper($request->get('nome'));
+        $campeonato->update();
+
+        return redirect()->action('CampeonatoController@listar');
     }
 
 }
