@@ -54,10 +54,12 @@ class CampeonatoController extends Controller
     {
         $campeonato = Campeonato::find($id);
         $campeonato->fill($request->all());
+        //$campeonato->categoria_id = $request->get('id');
         $campeonato->nome = strtoupper($request->get('nome'));
         $campeonato->update();
 
         return redirect()->action('CampeonatoController@listar');
+        dd($campeonato);
     }
 
 }

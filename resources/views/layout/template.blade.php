@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Deus no Controle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -43,6 +44,15 @@
                         <li><a href="{{ action('ParticipanteController@listar') }}">Listar Jogadores</a></li>
                     </ul>
                 </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Confrontos<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ action('ConfrontoController@index') }}">Novo Confronto</a></li>
+                        <li><a href="{{ action('ConfrontoController@listar') }}">Listar Confrontos/Partidas</a></li>
+                    </ul>
+                </li>
+
 
             </ul>
 

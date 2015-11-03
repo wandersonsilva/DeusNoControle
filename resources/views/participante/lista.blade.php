@@ -4,7 +4,7 @@
     <h3>Listagem dos Participantes Cadastrados</h3>
 
     <hr />
-
+    <a href="{{ action('ParticipanteController@index') }}" class="btn btn-success" style="margin-bottom:10px;">Novo Participante</a>
     <table class="table table-striped">
         <thead>
         <tr>

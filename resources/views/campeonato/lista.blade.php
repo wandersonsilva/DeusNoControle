@@ -5,6 +5,7 @@
 
     <hr />
 
+    <a href="{{ action('CampeonatoController@index') }}" class="btn btn-success" style="margin-bottom:10px;">Novo Campeonato</a>
     <table class="table table-striped">
         <thead>
         <tr>

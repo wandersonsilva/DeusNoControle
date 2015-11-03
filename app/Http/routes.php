@@ -32,3 +32,11 @@ Route::get('/participante', 'ParticipanteController@index');
 Route::get('/participante/listagem', 'ParticipanteController@listar');
 Route::post('/participante/adicionar', 'ParticipanteController@adicionar');
 Route::get('/participante/{id}/remover', 'ParticipanteController@remover');
+
+//Rotas do Controller Confronto
+Route::get('/confronto', 'ConfrontoController@index');
+Route::post('/confronto/adicionar', 'ConfrontoController@adicionar');
+Route::get('/confronto/listagem', 'ConfrontoController@listar');
+
+//Rotas do Controller Mobile
+Route::get('/m', 'MobileController@index');

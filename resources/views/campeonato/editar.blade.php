@@ -16,7 +16,7 @@
         <div class="form-group">
             <label for="nome">Categoria</label>
             <select id="categoria_id" name="categoria_id" class="form-control">
-                <option value="{{ $campeonato->categoria['id'] }}">{{ $campeonato->categoria['nome'] }}</option>
+                <option value="{{$campeonato->categoria_id }}">{{ $campeonato->categoria['nome'] }}</option>
 
                 @foreach(App\Categoria::all() as $categoria)
                     <option value="{{ $categoria->id }}">{{ $categoria->nome }}</option>

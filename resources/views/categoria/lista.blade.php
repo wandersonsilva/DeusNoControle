@@ -1,10 +1,10 @@
 @extends('layout.template')
 @section('conteudo')
 
-    <h3>Listagem das Categorias de Campeonato</h3>
+    <h3>Listagem das Categorias dos tipos de Jogos diponíveis para o Campeonato</h3>
 
     <hr />
-
+    <a href="{{ action('CategoriaController@index') }}" class="btn btn-success" style="margin-bottom:10px;">Nova Categoria</a>
     <table class="table table-striped">
         <thead>
         <tr>
