@@ -24,6 +24,7 @@ class CreateConfrontosTable extends Migration
 
             $table->integer('pontos_p1')->default('0');
             $table->integer('pontos_p2')->default('0');
+            $table->integer('num_jogador')->default('0');
             $table->timestamps();
         });
     }

@@ -33,6 +33,10 @@ class CampeonatoController extends Controller
     public function listar()
     {
         return view('campeonato.lista', array('campeonatos' => Campeonato::all()));
+//        return response()->json(Campeonato::all());
+//        return Campeonato::all()->toJson();
+        //return json_encode(Campeonato::all());
+
     }
 
     public function remover($id)

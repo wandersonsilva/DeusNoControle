@@ -37,6 +37,8 @@ Route::get('/participante/{id}/remover', 'ParticipanteController@remover');
 Route::get('/confronto', 'ConfrontoController@index');
 Route::post('/confronto/adicionar', 'ConfrontoController@adicionar');
 Route::get('/confronto/listagem', 'ConfrontoController@listar');
+Route::get('/confronto/numerar-jogadores', 'ConfrontoController@numerarJogador');
+Route::post('/confronto/adionarnumeracao', 'ConfrontoController@adicionarNumeracao');
 
 //Rotas do Controller Mobile
 Route::get('/m', 'MobileController@index');

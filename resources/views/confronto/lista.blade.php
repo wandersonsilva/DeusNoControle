@@ -10,9 +10,9 @@
         <tbody>
         @foreach($confronto as $row)
                 <tr>
-                    <td>{{ $row->nome1 }}<small> (J{{ $row->p1_id }})</small></td>
+                    <td>{{ $row->nome1 }}<small> (J{{ $row->num_jogador }})</small></td>
                     <td>{{ $row->pontos_p1 }}</td>
-                    <td>{{ $row->nome2 }}<small> (J{{ $row->p2_id }})</small></td>
+                    <td>{{ $row->nome2 }}<small> (J{{ $row->num_jogador }})</small></td>
                     <td>{{ $row->pontos_p2 }}</td>
                     <td>
                         <a href="#" class="btn btn-warning">Alterar Placar</a>

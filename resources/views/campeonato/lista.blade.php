@@ -17,6 +17,7 @@
         </tr>
         </thead>
         <tbody>
+
         @foreach($campeonatos as $row)
             <tr>
                 <th scope="row">{{ $row->id }}</th>
