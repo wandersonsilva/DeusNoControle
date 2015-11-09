@@ -40,5 +40,9 @@ Route::get('/confronto/listagem', 'ConfrontoController@listar');
 Route::get('/confronto/numerar-jogadores', 'ConfrontoController@numerarJogador');
 Route::post('/confronto/adionarnumeracao', 'ConfrontoController@adicionarNumeracao');
 
+//Rotas do Controller Sorteio
+Route::get('/sorteio', 'SorteioController@index');
+Route::post('/sorteio/anexar-jogador', 'SorteioController@adicionar');
+
 //Rotas do Controller Mobile
 Route::get('/m', 'MobileController@index');

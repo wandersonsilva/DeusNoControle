@@ -17,4 +17,10 @@ class Confronto extends Model
         return $this->belongsTo(Campeonato::class);
     }
 
+    protected $fillable = [
+      'id',
+      'num_jogador1',
+      'num_jogador2'
+    ];
+
 }

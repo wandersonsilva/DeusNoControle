@@ -6,21 +6,8 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $(".numera").hide();
-            $("#hide").click(function(){
-                $(".numera").hide();
-                $("#show").show();
-            });
-            $("#show").click(function(){
-                $(".numera").show();
-                $("#show").hide();
-            });
-        });
-    </script>
+
 </head>
 <body>
 
@@ -37,10 +24,10 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Campeonato <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jogadores<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ action('CampeonatoController@index') }}">Novo Campeonato</a> </li>
-                        <li><a href="{{action('CampeonatoController@listar')}}">Listar Campeonato</a></li>
+                        <li><a href="{{ action('ParticipanteController@index') }}">Novo Jogador</a></li>
+                        <li><a href="{{ action('ParticipanteController@listar') }}">Listar Jogadores</a></li>
                     </ul>
                 </li>
 
@@ -53,10 +40,10 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jogadores<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Campeonato <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ action('ParticipanteController@index') }}">Novo Jogador</a></li>
-                        <li><a href="{{ action('ParticipanteController@listar') }}">Listar Jogadores</a></li>
+                        <li><a href="{{ action('CampeonatoController@index') }}">Novo Campeonato</a> </li>
+                        <li><a href="{{action('CampeonatoController@listar')}}">Listar Campeonato</a></li>
                     </ul>
                 </li>
 
@@ -71,7 +58,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sorteio<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="{{ action('SorteioController@index') }}">Adicionar Jogadores</a></li>
                         <li><a href="{{ action('ConfrontoController@numerarJogador') }}">Numerar Participante</a></li>
+
                     </ul>
                 </li>
 
@@ -96,6 +85,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </body>
 </html>

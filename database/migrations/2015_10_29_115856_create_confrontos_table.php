@@ -13,6 +13,7 @@ class CreateConfrontosTable extends Migration
     public function up()
     {
         Schema::create('confrontos', function (Blueprint $table) {
+
             $table->increments('id');
             $table->integer('campeonato_id');
 
@@ -24,7 +25,8 @@ class CreateConfrontosTable extends Migration
 
             $table->integer('pontos_p1')->default('0');
             $table->integer('pontos_p2')->default('0');
-            $table->integer('num_jogador')->default('0');
+            $table->integer('num_jogador1')->default('0');
+            $table->integer('num_jogador2')->default('0');
             $table->timestamps();
         });
     }

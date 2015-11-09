@@ -14,5 +14,6 @@
     <file url="file://$PROJECT_DIR$/resources/views/mobile/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/participante/index.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/resources/views/participante/lista.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resources/views/sorteio/index.blade.php" charset="UTF-8" />
   </component>
 </project>

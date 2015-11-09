@@ -37,7 +37,7 @@ class ConfrontoController extends Controller
        $confronto = DB::table('confrontos as co')
             ->join('participantes as p1', 'co.p1_id', '=', 'p1.id')
             ->join('participantes as p2', 'co.p2_id', '=', 'p2.id')
-            ->select('co.p1_id', 'p1.nome as nome1', 'co.pontos_p1', 'co.p2_id', 'p2.nome as nome2','co.pontos_p2', 'num_jogador')
+            ->select('co.p1_id', 'p1.nome as nome1', 'co.pontos_p1', 'co.p2_id', 'p2.nome as nome2','co.pontos_p2', 'co.num_jogador1', 'co.num_jogador2')
             ->get();
 
 
@@ -55,7 +55,7 @@ class ConfrontoController extends Controller
         $numerar = DB::table('confrontos as co')
             ->join('participantes as p1', 'co.p1_id', '=', 'p1.id')
             ->join('participantes as p2', 'co.p2_id', '=', 'p2.id')
-            ->select('p1.nome as nome1', 'co.p1_id', 'co.p2_id', 'p2.nome as nome2', 'num_jogador')
+            ->select('co.id', 'p1.nome as nome1', 'co.p1_id', 'co.p2_id', 'p2.nome as nome2', 'co.num_jogador1', 'co.num_jogador2')
             ->get();
 
         return view('confronto.numerajogador', compact('numerar'));
@@ -64,21 +64,30 @@ class ConfrontoController extends Controller
     public function adicionarNumeracao(Request $request, Confronto $confronto)
     {
 
-        $confronto->p1_id = $request->get('p1_id');
-        $confronto->num_jogador = $request->get('numero');
+        $confronto->id              = $request->get('id');
+        $confronto = Confronto::find($request->get('id'));
+        //$confronto->p1_id           = $request->get('p1_id');
+        $confronto->num_jogador1    = $request->get('numero1');
+
+        //$confronto->p2_id           = $request->get('p2_id');
+        $confronto->num_jogador2    = $request->get('numero2');
+
+
+
+        $confronto->fill($request->all());
 
 
 //        $confronto->campeonato_id = $request->get('campeonato_id');
 //        $confronto->p1_id = $request->get('p1_id');
 //        $confronto->num_jogador = $request->get('numero');
 
-        dd($confronto);
-
+//        dd($confronto);
+//
 //        //$confronto->p2_id = $request->get('p2_id');
 //
-//        $confronto->save();
-//
-//        return redirect()->action('ConfrontoController@numerarJogador');
+        $confronto->update();
+
+        return redirect()->action('ConfrontoController@numerarJogador');
 
     }
 
